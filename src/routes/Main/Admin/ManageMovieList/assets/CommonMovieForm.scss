@@ -1,0 +1,62 @@
+#commonMovieFormBackground {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 25px 0;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+  }
+
+  h1 {
+    position: relative;
+    z-index: 2;
+    color: #ff5e01;
+  }
+
+  .form-group {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    color: #ff5e01;
+    font-weight: bold;
+    margin-bottom: 15px;
+
+    select {
+      cursor: pointer;
+    }
+
+    #previewImg {
+      width: 300px;
+      height: 300px;
+    }
+
+    .ant-picker {
+      width: 500px;
+    }
+  }
+
+  .btnSection {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+
+  .form-control:focus {
+    border-color: #ec7532 !important;
+    box-shadow: 0px 1px 1px #ec7532 inset !important;
+  }
+}

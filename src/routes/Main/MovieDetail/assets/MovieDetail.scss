@@ -1,0 +1,343 @@
+@import "../../../../assets/modules/helpers/mixins";
+
+.movieDetail__wrapper {
+  padding: 80px 100px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  text-align: center;
+  position: relative;
+
+  @include sm {
+    padding: 80px 0;
+  }
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .movieDetail__content {
+    margin-bottom: 100px;
+
+    .movieDetail__wrapper-direct-01 {
+      z-index: 3;
+      max-height: 550px;
+      max-width: 350px;
+
+      @include lg {
+        margin: 0 auto;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 90%;
+        border-radius: 8px;
+
+        @include ipadpro {
+          height: 90%;
+        }
+
+        @include sm {
+          height: 80%;
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+
+      a {
+        color: #000;
+      }
+
+      .modal-video-close-btn {
+        background-color: transparent;
+        padding: 0;
+      }
+
+      button {
+        background-color: #fbbd61;
+        padding: 5px 25px;
+        margin-top: 10px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+
+        &:hover {
+          font-weight: 600;
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    .movieDetail__wrapper-direct-02 {
+      z-index: 2;
+
+      @include lg {
+        margin-top: 115px;
+      }
+
+      @include sm {
+        margin-top: 0;
+      }
+
+      h1 {
+        color: #fff;
+      }
+
+      .format {
+        width: 100px;
+        padding: 3px 0;
+        margin-bottom: 20px;
+        color: #fdb73b;
+        border: 2px solid rgb(253, 183, 59);
+        border-radius: 4px;
+        font-weight: 500;
+        font-size: 16px;
+        font-family: "Varela Round", sans-serif;
+      }
+
+      p {
+        color: #fff;
+        text-align: left;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.8;
+        font-family: "Varela Round", sans-serif;
+
+        .introduce {
+          color: #ec7532;
+          font-weight: bold;
+        }
+      }
+
+      .evaluate {
+        color: #fff;
+      }
+    }
+  }
+
+  h2.notice {
+    color: #ec7532;
+    font-weight: 500;
+    z-index: 2;
+    position: relative;
+
+    @include sm {
+      font-size: 1.5rem;
+    }
+  }
+
+  .availableSchedule {
+    z-index: 1;
+    position: relative;
+    border-radius: 15px;
+    width: 100%;
+    margin: 0 auto;
+    height: 600px;
+    overflow: auto;
+
+    .availableSchedule__inside-left {
+      @include md {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-left: 35px;
+      }
+
+      @include sm {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-left: 25px;
+      }
+
+      .availableTheater {
+        cursor: pointer;
+        margin: 15px 0;
+
+        @include md {
+          width: 185px;
+        }
+
+        @include sm {
+          width: 150px;
+        }
+
+        img {
+          display: block;
+          width: 80px;
+          height: 80px;
+          border: 2px solid #ec7532;
+          border-radius: 50%;
+
+          @include md {
+            width: 60px;
+            height: 60px;
+          }
+
+          @include sm {
+            width: 50px;
+            height: 50px;
+          }
+        }
+
+        p {
+          font-size: 16px;
+          text-transform: uppercase;
+
+          @include ipadpro {
+            font-size: 14px;
+          }
+
+          @include md {
+            font-size: 14px;
+            text-align: left;
+          }
+
+          @include sm {
+            font-size: 12px;
+          }
+
+          &:hover {
+            color: #ec7532;
+          }
+        }
+      }
+
+      .clicked {
+        // padding-left: 10px;
+        // transform: scale(1.1);
+
+        img {
+          box-shadow: 0 0 20px 0 #ec7532;
+        }
+
+        p {
+          font-weight: bold;
+          color: #ec7532;
+          font-size: 18px;
+
+          @include ipadpro {
+            font-size: 14px;
+          }
+        }
+        
+      }
+    }
+
+    .availableSchedule__inside-right {
+      .availableSchedule__inside-right-above {
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        max-height: 90px;
+
+        .availableDate {
+          display: flex;
+          flex-wrap: nowrap;
+          white-space: nowrap;
+          padding: 2px;
+          margin: 0 2px;
+          cursor: pointer;
+
+          p {
+            font-size: 26px;
+            height: 100%;
+            padding: 20px 15px 0;
+            transition: all 0.25s;
+
+            @include sm {
+              font-size: 18px;
+            }
+
+            &:hover {
+              transform: scale(1.2);
+              color: #ec7532;
+            }
+          }
+        }
+
+        .chose {
+          color: #ec7532;
+        }
+      }
+
+      .availableSchedule__inside-right-below {
+        @include md {
+          height: 400px;
+          overflow: auto;
+        }
+
+        @include sm {
+          height: 300px;
+          overflow: auto;
+        }
+        .insideRightBelow {
+          img {
+            display: block;
+            height: 60px;
+
+            @include sm {
+              height: 50px;
+            }
+          }
+
+          .insideRightBelow__names {
+            margin-left: 8px;
+
+            .systemName {
+              font-size: 22px;
+              color: #ec7532;
+              font-weight: 500;
+              margin-bottom: 0;
+
+              @include sm {
+                font-size: 18px;
+              }
+            }
+
+            .clusterName {
+              @include sm {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+
+      .bookingBtn {
+        flex-wrap: wrap;
+
+        .canBeSelectedHours {
+          text-align: center;
+          line-height: 35px;
+          width: 100px;
+          height: 35px;
+          background-image: linear-gradient(to right, #fbbd61, #ec7532);
+          border-radius: 8px;
+          margin: 5px 5px;
+          font-size: 18px;
+          cursor: pointer;
+
+          @include sm {
+            width: 65px;
+          }
+        }
+      }
+    }
+  }
+
+  .availableTheater {
+    position: relative;
+    z-index: 1;
+  }
+}

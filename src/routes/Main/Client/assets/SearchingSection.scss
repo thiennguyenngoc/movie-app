@@ -1,0 +1,114 @@
+@import "../../../../assets/modules/helpers/mixins";
+
+.searchingSection {
+  margin: 30px 0 80px;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include ipadpro {
+    padding: 0 25px;
+  }
+
+  @include md {
+    margin: 10px 0 250px;
+    padding: 50px;
+  }
+
+  @include sm {
+    padding: 25px;
+    margin-bottom: 150px;
+  }
+
+  .fastBooking {
+    display: flex;
+    align-items: center;
+
+    @include xxl {
+      justify-content: center;
+    }
+
+    & > img {
+
+      @include ipadpro {
+        width: 10%;
+      }
+
+      @include md {
+        width: 20%;
+      }
+
+      @include sm {
+        width: 30%;
+      }
+    }
+
+    & > h1 {
+      color: #ff5e01;
+      font-size: 2.3rem;
+      margin-left: 25px;
+
+      @include ipadpro {
+        font-size: 2rem;
+      }
+
+      @include md {
+        font-size: 3rem;
+      }
+
+      @include sm {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .searchingWrapper {
+    display: flex;
+    justify-content: center;
+
+    & > .form-group {
+      min-width: 300px;
+      max-width: 300px;
+      margin: 10px;
+
+      @include ipadpro {
+        margin: 10px 5px;
+        max-width: none;
+        min-width: 240px;
+      }
+
+      @include sm;
+      @include md {
+        margin: 15px 0;
+        max-width: none;
+      }
+    }
+
+    @include md {
+      display: block;
+    }
+
+    @include sm {
+      display: block;
+    }
+  }
+
+  button.searchingBtn {
+    display: block;
+    padding: 5px 50px;
+    margin: 0 auto;
+
+    @include ipadpro {
+      width: 30%;
+    }
+
+    @include md {
+      width: 100%;
+    }
+
+    @include sm {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+#PageTitle {
+  font-size: 50px;
+  text-align: center;
+  color: #ff5e01;
+  padding: 15px 0;
+}
+
+.addBtn {
+  margin-bottom: 15px;
+}
+
+.searchBar {
+  max-width: 550px;
+}
+
+.movieListTable {
+  text-align: center;
+
+  thead {
+    th {
+      font-size: 16px;
+      min-width: 100px;
+      color: #ff0000;
+    }
+
+    th:nth-child(5) {
+      min-width: 150px;
+    }
+  }
+
+  tbody tr {
+    td {
+      font-weight: 700;
+      color: #000;
+    }
+
+    td:nth-child(4) {
+      text-align: left;
+    }
+
+    #editBtn,
+    #dltBtn,
+    #crtScheBtn {
+      font-size: 32px;
+      margin: 0 3px;
+      cursor: pointer;
+    }
+
+    #editBtn:hover {
+      color: #0000ff;
+    }
+
+    #dltBtn:hover {
+      color: #ff0000;
+    }
+
+    #crtScheBtn:hover {
+      color: #008000;
+    }
+  }
+}
+

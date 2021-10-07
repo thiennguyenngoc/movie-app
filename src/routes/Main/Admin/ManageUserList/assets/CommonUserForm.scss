@@ -1,0 +1,33 @@
+#commonUserFormBackground {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  padding: 25px 0;
+
+  & > h1 {
+    position: relative;
+    z-index: 2;
+    color: #ff5e01;
+    text-align: center;
+  }
+
+  .form-group {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    color: #ff5e01;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .btnSection {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+}

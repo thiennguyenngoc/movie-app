@@ -1,0 +1,128 @@
+@import "../../../../assets/modules/helpers/mixins";
+
+.promotion {
+  background-image: url("../../../../assets/images/backgroundapp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+
+  @include sm {
+    text-align: center;
+  }
+
+  @include lg {
+    text-align: center;
+  }
+
+  .introduceApp {
+    max-height: 650px;
+    padding-top: 200px;
+    color: #fff;
+
+    @include sm {
+      padding-top: 50px;
+    }
+
+    @include lg {
+      padding-top: 80px;
+    }
+
+    & > h2 {
+      font-size: 2.2rem;
+      color: #fff;
+
+      @include sm {
+        font-size: 1.8rem;
+      }
+    }
+
+    & > button {
+      background-image: linear-gradient(to right, #fbbd61, #ec7532);
+      outline: none;
+      padding: 10px 20px;
+      margin-bottom: 15px;
+      border-radius: 15px;
+      border: none;
+      font-weight: bolder;
+      position: relative;
+      overflow: hidden;
+
+      a {
+        color: #000;
+        position: relative;
+        z-index: 1;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 150%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        background-color: rgba(236, 117, 50, 0.9);
+        transform: skewX(30deg);
+        transition: all 0.5s;
+        z-index: 0;
+      }
+
+      &:hover::after {
+        width: 110%;
+      }
+    }
+
+    span#highlighted-brand {
+      font-weight: 500;
+      font-size: 26px;
+      color: #ec7532;
+    }
+
+    .downloadMethod {
+      @include sm {
+        display: flex;
+        justify-content: center;
+      }
+
+      img {
+        margin: 0 10px;
+        width: 200px;
+
+        @include sm {
+          width: 150px;
+        }
+      }
+    }
+  }
+
+  .showApp {
+    background-image: url("../../../../assets/images/mobile-frame.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 590px;
+    max-width: 280px;
+    position: relative;
+    border-radius: 35px;
+    margin: 35px auto;
+
+    @include sm {
+      min-height: 500px;
+      max-width: 238px;
+    }
+
+    .showApp_inside {
+      position: absolute;
+      bottom: 10px;
+      left: 8px;
+      width: 94%;
+      border-radius: 30px;
+      overflow: hidden;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}

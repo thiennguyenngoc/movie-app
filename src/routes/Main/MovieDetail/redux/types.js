@@ -1,0 +1,1 @@
+export const GET_MOVIE_DETAIL = '[admin]: GET_MOVIE_DETAIL'

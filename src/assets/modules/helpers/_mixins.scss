@@ -1,0 +1,40 @@
+// @mixin xl {
+//   @media (max-width: 1199px) {
+//     @content;
+//   }
+// }
+@mixin xxl {
+  @media (min-width: 1300px) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (max-width: 1199) {
+    @content;
+  }
+}
+@mixin ipadpro {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+@mixin md {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin sm {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
+@mixin xs {
+  @media (max-width: 400px) {
+    @content;
+  }
+}

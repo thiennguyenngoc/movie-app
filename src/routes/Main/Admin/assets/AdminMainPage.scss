@@ -1,0 +1,27 @@
+.adminFormWrapper {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+
+  .ant-tabs-nav-list {
+    position: fixed;
+
+    .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+      color: #ec7532;
+    }
+
+    .ant-tabs-tab-btn {
+      color: #000;
+      font-size: 18px;
+      margin: 15px 0;
+    }
+
+    .ant-tabs-tab-btn:hover,
+    .ant-tabs-tab:hover {
+      color: #fbbd61;
+    }
+  }
+}

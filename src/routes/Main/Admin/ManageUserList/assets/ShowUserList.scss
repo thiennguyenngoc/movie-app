@@ -1,0 +1,51 @@
+#pageTitle {
+  font-size: 50px;
+  text-align: center;
+  color: #ff5e01;
+  padding: 15px 0;
+}
+
+.addBtn {
+  margin-bottom: 15px;
+}
+
+.searchBar {
+  max-width: 550px;
+}
+
+.userListTable {
+  text-align: center;
+
+  th {
+    font-size: 16px;
+    min-width: 100px;
+    color: #ff0000;
+    white-space: nowrap;
+  }
+
+  th:nth-child(1) {
+    min-width: 1px;
+    max-width: 2px;
+  }
+
+  td {
+    font-weight: 700;
+    color: #000;
+
+    #editUserBtn:hover {
+      cursor: pointer;
+      color: #0000ff;
+    }
+
+    #delUserBtn:hover {
+      cursor: pointer;
+      color: #ff0000;
+    }
+  }
+
+  td:nth-child(2), td:nth-child(7) {
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

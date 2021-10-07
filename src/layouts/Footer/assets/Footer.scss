@@ -1,0 +1,88 @@
+@import "../../../assets/modules/helpers/mixins";
+
+#footer {
+  padding: 15px 25px;
+
+  @include xxl {
+    padding: 15px 50px;
+  }
+
+  @include md {
+    text-align: center;
+  }
+
+  h5 {
+    color: #ffa500;
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  .terms {
+    color: #fff;
+
+    @include md {
+      margin-bottom: 25px;
+    }
+
+    @include sm {
+      margin-bottom: 35px;
+    }
+  }
+
+  .brandList {
+    img {
+      display: inline-block;
+      width: 20%;
+
+      @include xxl {
+        width: 15%;
+        margin: 0 5px 0;
+      }
+
+      @include md {
+        margin: 0 2px 0;
+        width: 15%;
+      }
+
+      @include sm {
+        width: 10%;
+        margin: 0 5px 35px;
+      }
+    }
+  }
+
+  .payment {
+    @include sm {
+      margin-bottom: 35px;
+    }
+
+    img {
+      display: inline-block;
+      margin: 0 3px;
+      width: 55px;
+      height: 45px;
+      border-radius: 10px;
+
+      @include sm {
+        width: 45px;
+        height: 35px;
+      }
+    }
+  }
+
+  .contact {
+    color: #fff;
+
+    @include sm {
+      margin-bottom: 35px;
+    }
+
+    img {
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+      margin: 0 5px 15px;
+      border-radius: 10px;
+    }
+  }
+}

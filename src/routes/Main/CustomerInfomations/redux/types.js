@@ -1,0 +1,1 @@
+export const GET_TICKET_INFO = '[user]: GET_BOOKING_INFO'
